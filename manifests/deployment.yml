@@ -14,7 +14,9 @@ spec:
         app: app2 
     spec:
       containers:
-        - name: webtest 
-          image: davidxw/webtest:latest
+        - name: cameracheck 
+          image: corpprodstoreseverseenacr.azurecr.io/camera_check
           ports:
           - containerPort: 80
+      imagePullSecrets:
+          - name: regcred
